@@ -1,10 +1,20 @@
 /*
  Download this program,
  compile:  javac FSTest.java
+ ensure:  $SDC_DATA is set to the actual SDC_DATA directory.
  run: java FSTest
- the program requires this path must exist:/var/lib/sdc/data
- The program needs to be run as a user who has r/w/x access to that directory.
- */
+
+ The program needs to be run as a user who has r/w/x access to the directory
+ which is pointed to by the $SDC_DATA environment variable.
+
+ One line of trace is generated for every 10k times through the loop.
+ eg:
+
+ 10000 open file time: 649ms  rename file time: 542ms  write file time: 28ms  close file time: 853ms  total time: 2073ms
+ 20000 open file time: 579ms  rename file time: 487ms  write file time: 15ms  close file time: 788ms  total time: 1870ms
+ 30000 open file time: 563ms  rename file time: 485ms  write file time: 15ms  close file time: 790ms  total time: 1854ms
+
+*/
 
 import java.io.File;
 import java.io.FileWriter;
