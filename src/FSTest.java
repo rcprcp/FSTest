@@ -36,7 +36,7 @@ public class FSTest {
 
     // build
     String bobPath = dataDir + "/runInfo/bob/0/bob";
-    String bobOldPath = bobPath += ".old";
+    String bobOldPath = bobPath + ".old";
     System.out.println("paths: "+ bobPath + " and " + bobOldPath);
     File bob = new File(bobPath);
     File bobOld = new File(bobOldPath);
